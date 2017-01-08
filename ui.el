@@ -13,13 +13,24 @@
 (use-package window-numbering
   :init (window-numbering-mode))
 
+(use-package windresize)
+
+;; windmove
+(use-package windmove
+  :init (windmove-default-keybindings))
+
+;; which-key
+(use-package which-key
+  :init (which-key-mode))
+
 ;; custom colors
 (global-hl-line-mode 1)
-(set-face-background 'hl-line "#383838")
+(set-face-background 'hl-line "#1a1a1a")
 (set-face-foreground 'highlight nil)
 (set-face-background 'region "#555555")
 (set-face-background 'mode-line "#555555")
 (set-face-foreground 'mode-line "#e4e4e4")
+(set-face-background 'default "#222222")
 
 ;; powerline
 (require 'powerline)
@@ -40,10 +51,6 @@
 
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 
-;; windmove
-(use-package windmove
-  :init (windmove-default-keybindings))
-
 ;; dashboard
 (use-package dashboard
   :config (dashboard-setup-startup-hook))
@@ -52,12 +59,4 @@
 (setq dashboard-startup-banner 'official)
 (setq dashboard-items '((recents  . 10)
                         (bookmarks . 10)))
-
-;; which-key
-(use-package which-key
-  :init (which-key-mode))
-
-(setq projectile-mode-line '(:eval (if (file-remote-p default-directory) " P"
-                                       (format " P[%s]" (projectile-project-name))
-                                     )))
 

@@ -1,12 +1,6 @@
 ;; helm
 (use-package helm) 
 
-(global-set-key (kbd "M-x") 'helm-M-x)
-(global-set-key (kbd "C-x C-m") 'helm-M-x)
-(global-set-key (kbd "C-c C-m") 'helm-M-x)
-(global-set-key (kbd "C-x b") 'helm-mini)
-(global-set-key (kbd "C-x C-f") 'helm-find-files)
-
 ;; projectile
 ;;(use-package flx-ido)
 (use-package projectile

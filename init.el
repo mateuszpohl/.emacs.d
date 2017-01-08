@@ -1,5 +1,3 @@
-(package-initialize)
-
 ;; utility functions ---------------------------------------------------
 
 (defconst user-init-dir
@@ -28,11 +26,18 @@
 ;; evil
 (load-user-file "evil.el")
 
-;; ideB
+;; ide
 (load-user-file "ide.el")
+
+;; javascript
+(load-user-file "javascript.el")
 
 ;; ui
 (load-user-file "ui.el")
+
+;; mode-line
+(load-user-file "mode-line.el")
+
 
 ;; global keybindings
 (load-user-file "global-keys.el")
@@ -57,5 +62,12 @@
  '(package-selected-packages
    (quote
     (magit windresize editorconfig flx flx-ido twilight-theme solarized-theme window-numbering which-key use-package tern smartparens rainbow-delimiters powerline neotree move-text monokai-theme js2-refactor js2-highlight-vars helm-projectile helm-emmet git-gutter flycheck-haskell expand-region evil-escape ensime elscreen dashboard company-ghci company-ghc)))
- '(recentf-mode t))
+ '(recentf-mode t)
+ '(safe-local-variable-values (quote ((projectile-project-name . "orchis-ui")))))
 
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
